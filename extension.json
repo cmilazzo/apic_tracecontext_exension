@@ -1,0 +1,27 @@
+{
+  "extension": {
+    "properties": {
+      "name": "trace-context",
+      "version": "1.0.0",
+      "title": "W3C Trace Context Extension",
+      "description": "Bridges IBM API Connect correlation ID with W3C Trace Context standards for distributed tracing",
+      "author": "API Platform Team",
+      "license": "Proprietary"
+    },
+    "assembly-actions": [],
+    "gateway-extensions": [
+      {
+        "name": "trace-context-request",
+        "type": "request",
+        "scope": "gateway",
+        "gatewayscript": "trace-context-request.js"
+      },
+      {
+        "name": "trace-context-response",
+        "type": "response",
+        "scope": "gateway",
+        "gatewayscript": "trace-context-response.js"
+      }
+    ]
+  }
+}
